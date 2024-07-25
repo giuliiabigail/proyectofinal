@@ -368,23 +368,135 @@ a:hover {
 
 .bodyNosotros{
     width: 100%;
-    height: 10vh;
+    height: 40vh;
     background-image: url(../assets/img/fondonosotros.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover ;
 }
 
+.tituloNosotros{
+    position: absolute;
+    width: 60.1875rem;
+    height: 14.8125rem;
+    left: calc(50% - 60.1875rem/2 - 1.25rem);
+    top: 330px;
+    font-weight: 300;
+    font-size: 5rem;
+    line-height: 5.25rem;
+    text-align: center;
+    background: rgb(206, 206, 206);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: normal;
+}
+
+.nosotrosInfo{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    grid-template:repeat(6,1fr)/ repeat(3,1fr) ;
+    row-gap: 180px;
+    column-gap: 10px;
+}
+
+.nosotrosInfo .imgUno{
+    width: 30%;
+    height: 20vh;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1 ;
+    grid-row-start: 4;
+    grid-row-end:4;
+}
+.nosotrosInfo .img3{
+    width: 30%;
+    height: 20vh;
+    margin: 300px;
+    margin-top: 10px;
+    grid-column-start: 1;
+    grid-column-end: 1 ;
+    grid-row-start: 4;
+    grid-row-end:4;
+}
+.imgDos{
+    width: 30%;
+    height: 20vh;
+    margin-top: 250px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end:4;
+}
+.img4{
+    width: 30%;
+    height: 20vh;
+    margin: 300px;
+    margin-top: 250px;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.quienSomos{
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: rgba(0, 0, 0, 0.7);
+}
+.descripcionNosotros{
+    margin-top: 40px;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: rgba(217, 217, 217, 0.3);
+    color: rgba(49, 49, 49, 0.684);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 45px;
+    text-align:start;
+}
+.comunidad{
+    margin-top: 300px;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    color: rgba(49, 49, 49, 0.684);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 45px;
+    text-align:start;
+}
 /* Contacto html */
 .bodyContacto{
     width: 100%;
-    height: 160vh;
     background-image: url(../assets/img/fondocontacto.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover ;
 }
 
+.tituloContacto{
+    position: absolute;
+    width: 60.1875rem;
+    height: 14.8125rem;
+    left: calc(50% - 60.1875rem/2 - 1.25rem);
+    top: 270px;
+    font-weight: 300;
+    font-size: 5rem;
+    line-height: 5.25rem;
+    text-align: center;
+    color:rgba(30, 30, 30, 1);
+}
 
 
 
@@ -392,3 +504,39 @@ a:hover {
     position: relative;
     top: 4rem;
 }
+
+.sectionContacto{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    grid-template:repeat(4,1fr)/ repeat(2,1fr) ;
+    row-gap: 130px;
+    column-gap: 10px
+}
+.contacto{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end:4;
+    color: rgba(0, 0, 0, 0.748);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 55px;
+    text-align:start;
+}
+.input-group{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end:4;
+    color: rgba(0, 0, 0, 0.748);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 95px;
+    text-align:center;
+    margin-top: 50px;
+}
+
