@@ -6,7 +6,6 @@
 }
 .bodyIndex{
     width: 100%;
-    height: 110vh;
     background-image: url(../assets/img/fondoindex.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -16,14 +15,34 @@
 .logoIndex {
     position: relative ;
     width: 30.3125rem;
-    top: 2rem;
+    top: 10px;
     left: 29.3125rem;
     min-height: 6.25rem;
     padding: 1.25rem 3.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+}
+
+@media(max-width:376px) {
+    .logoIndex{ 
+        width: 5px;
+        top: 10px;
+        left: -10px;
+        justify-content: flex-start;
+    }
+}
+@media(max-width:768px) {
+    .logoIndex{ 
+        width: 5px;
+        top: 10px;
+        left: -10px;
+        justify-content: flex-start;
+    }
+    .footerIndex{
+        left: 50%;
+        top: 5px
+    }
 }
 
 
@@ -64,12 +83,13 @@ nav {
     font-size: 2.5rem;
     line-height: 2.9375rem;
 }
-
-@media(max-width:23.4375rem) {
-    .nav{
+@media(max-width:376px) {
+    .navbar{
         flex-direction: column;
     }
 }
+
+
 
 a:hover {
     color: aliceblue;
@@ -103,7 +123,17 @@ a:hover {
     grid-row-end:3 ;
 }
 
-
+@media(max-width:376px) {
+    .frase{
+        grid-row-start: 4;
+        grid-row-end:4;
+    }
+    
+    .descripcion{ 
+        grid-row-start: 5;
+        grid-row-end:5;
+    }
+}
 
 
 .footerIndex{
@@ -117,7 +147,7 @@ a:hover {
     align-items: center;
     flex-direction: column;
     left: 0%;
-    top: 200px;
+    top: 150px;
 }
 
 .footerPaginas{
@@ -199,8 +229,16 @@ a:hover {
 
 .logoPaginas{
     position: relative;
-    top: 4rem;
+    top: 25px;
     padding: 40px;
+}
+@media(max-width:376px) {
+    .logoPaginas{ 
+        width: 5px;
+        top: 25px;
+        left:0px;
+        justify-content: flex-start;
+    }
 }
 
 
@@ -212,7 +250,6 @@ a:hover {
     top: 330px;
     font-weight: 300;
     font-size: 5rem;
-    line-height: 5.25rem;
     text-align: center;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.71) 0%, rgba(102, 102, 102, 0.71) 100%);
     -webkit-background-clip: text;
@@ -222,29 +259,52 @@ a:hover {
     mix-blend-mode: normal;
 }
 
-.contenedorCards{
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    padding: 30px;
-    grid-template:repeat(10,1fr)/ repeat(6,1fr) ;
-    row-gap: 100px;
-    column-gap: 10px;
+@media(max-width:376px) {
+    .tituloProduct{ 
+        width: 100%;
+        top: 500px;
+        left: 0%;
+        font-size: 60px;
+    }
+    
+}
+@media(max-width:768px) {
+    .tituloProduct{ 
+        width: 100%;
+        top: 530px;
+        left: 0%;
+        font-size: 60px;
+    }
 }
 
-.card{
-    grid-row-start: 8;
-    grid-row-end:8 ;
-}
 
 
-.contenedorCards .card{
-    width: 12.5rem;
+
+.row .card{
+    width: 200px;
     height: 18.75rem;
     background-color: rgb(255, 255, 255);
     border-radius: .3125rem;
     box-shadow: .3125rem .3125rem .625rem rgba(0,0,0.438);
-    margin: 10px; 
+    margin: 80px;
+    top: 400px; 
+
+}
+@media(max-width:376px){
+    .row .card{
+        width: 180px;
+        height: 280px;
+        margin: 20px;
+        top: 500px; 
+    }
+}
+@media(max-width:768px){
+    .row .card{
+        width: 180px;
+        height: 280px;
+        margin: 20px;
+        top: 500px; 
+    }
 }
 
 .card .cardImg{
@@ -256,6 +316,7 @@ a:hover {
     height: 100%;
     object-fit: contain;
 }
+
 
 
 
@@ -291,11 +352,11 @@ a:hover {
 .rutinaDiaNoche{
     display: grid;
     width: 100%;
-    height: 100vh;
     padding: 40px;
     grid-template:repeat(3,1fr)/ repeat(3,1fr) ;
     row-gap: 10px;
     column-gap: 10px;
+    margin-top: 230px;
 
 } 
 .dia{
@@ -339,6 +400,36 @@ a:hover {
     grid-row-end:1;
     margin-top: 90px;
 }
+@media(max-width:376px) {
+    .dia{
+        font-size: 50px;
+        font-weight: 100;
+    }
+    .dia{
+        row-gap: 5px;
+    }
+    .noche{
+        font-size: 50px;
+        font-weight: 100;
+    }
+    .noche{
+        row-gap: 5px;
+    }
+    .productoSkin{
+        font-size: 15px;
+        font-weight: 100;
+    }
+    .descripcionSkin{
+        font-size: 10px;
+        font-weight: 100
+    }
+}
+
+    @media(max-width:768px) {
+        .imgRutina
+            {width: 100%;
+            height: 30vh}
+}
 .tituloRutina{
     grid-column-start: 3;
     grid-column-end: 3 ;
@@ -351,16 +442,23 @@ a:hover {
 }
 .iframe{
     position: relative;
-    width: 50%;
-    height: 60vh;
-    background: rgba(113, 114, 116, 0.53);
-    padding: 1.25rem 3.125rem;
+    width: 100%;   
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    left: 25%;
-    top: 1100px;
+    flex-direction: column;;
+    top: 300px;
+    
+}
+@media(max-width:376px) {
+    .iframe{
+        height: auto;
+    }
+}
+@media(max-width:768px) {
+    .iframe{
+        top: 300px;
+    }
 }
 
 
@@ -394,7 +492,7 @@ a:hover {
 }
 
 .nosotrosInfo{
-    display: grid;
+
     width: 100%;
     height: 100vh;
     padding: 40px;
@@ -403,72 +501,36 @@ a:hover {
     column-gap: 10px;
 }
 
-.nosotrosInfo .imgUno{
+
+.nosotrosInfo .row{
     width: 30%;
     height: 20vh;
+    margin: 100px;
     margin-top: 10px;
-    grid-column-start: 1;
-    grid-column-end: 1 ;
-    grid-row-start: 4;
-    grid-row-end:4;
 }
-.nosotrosInfo .img3{
-    width: 30%;
-    height: 20vh;
-    margin: 300px;
-    margin-top: 10px;
-    grid-column-start: 1;
-    grid-column-end: 1 ;
-    grid-row-start: 4;
-    grid-row-end:4;
-}
-.imgDos{
-    width: 30%;
-    height: 20vh;
-    margin-top: 250px;
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end:4;
-}
-.img4{
-    width: 30%;
-    height: 20vh;
-    margin: 300px;
-    margin-top: 250px;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 1;
+.col{
+    width: 270px;
+    height: 270px;
+    margin: 15px;
 }
 
+
 .quienSomos{
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
     color: rgba(0, 0, 0, 0.7);
 }
 .descripcionNosotros{
     margin-top: 40px;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    background-color: rgba(217, 217, 217, 0.3);
-    color: rgba(49, 49, 49, 0.684);
     font-style: normal;
     font-weight: 400;
     font-size: 25px;
     line-height: 45px;
     text-align:start;
 }
+.contenedortexto{
+    background-color: rgba(217, 217, 217, 0.3);
+}
 .comunidad{
-    margin-top: 300px;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 4;
+    margin-top: 20px;
     color: rgba(49, 49, 49, 0.684);
     font-style: normal;
     font-weight: 400;
@@ -500,10 +562,6 @@ a:hover {
 
 
 
-.bodyContacto .logoPaginas{
-    position: relative;
-    top: 4rem;
-}
 
 .sectionContacto{
     display: grid;
